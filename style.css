@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* variables or custom properties */
+
+html {
+  font-size: 14px;
+
+  --primary-color: #f67070;
+}
+
+h1 {
+  font-size: 1.25rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  /* 1vh = 1% of vertical height */
+  min-height: 100vh;
+  /* fallback */
+  font-family: 'Poppins', sans-serif;
+  background-color: #f3f6fc;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  padding: 18px 0;
+  border-bottom: 1px solid grey;
+}
+/* direct child selector */
+.navbar > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.hero-section .container {
+  background: linear-gradient(to bottom, rgb(182, 182, 182), transparent),
+    url('images/hero-bg.jpg') no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 240px;
+  text-align: center;
+}
+
+.greeting-text {
+  color: white;
+  font-size: 2rem;
+}
+
+.nav-items {
+  display: none;
+  gap: 36px;
+}
+
+.nav-items li {
+  list-style: none;
+}
+
+.nav-link, a {
+  color: #333;
+}
+
+/* pseudo class selector */
+.nav-link:hover, a:hover {
+  color: var(--primary-color);
+}
+
+.btn {
+  font-size: 1rem;
+  padding: 8px 12px;
+  /* hex color system */
+
+  border: none;
+  border-radius: 6px;
+}
+
+.btn:hover {
+  box-shadow: 2px 2px 5px #ccc;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #f65454;
+}
+
+.btn-secondary {
+  background-color: white;
+  border: 1px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.popular-section {
+  margin-top: 24px;
+}
+
+.popular-section .title {
+  text-align: center;
+  font-weight: 600;
+}
+
+.popular-section .card-container {
+  margin-top: 24px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.card {
+  width: 320px;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 1px 1px 2px grey;
+}
+
+.card img {
+  height: 200px;
+  width: 100%;
+}
+
+.card .card-body {
+  padding: 16px;
+}
+
+.card .card-footer {
+  padding: 24px 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer .container {
+  font-size: 0.8rem;
+  margin-top: 36px;
+  padding: 18px 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid grey;
+}
+
+footer ul {
+  display: flex;
+  gap: 36px;
+}
+
+footer ul li {
+  list-style: none;
+}
+
+/* CSS Units */
+/* %, px, vh, vw, em, rem */
+/* fixed unit: px */
+/* relative unit: %, em, rem */
+
+@media (width >= 640px) {
+  html {
+    font-size: 16px;
+  }
+
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .hero-section .container {
+    height: 320px;
+  }
+
+  .nav-items {
+    display: flex;
+  }
+}
+
+@media (width >= 768px) {
+  .card {
+    width: 300px;
+  }
+
+  footer .container {
+    flex-direction: row;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #333;
+    color: white;
+  }
+
+  .card {
+    background-color: inherit;
+  }
+}
