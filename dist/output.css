@@ -668,10 +668,6 @@ video {
   width: 80%;
 }
 
-.w-40{
-  width: 10rem;
-}
-
 .w-48{
   width: 12rem;
 }
@@ -680,8 +676,17 @@ video {
   max-width: 48rem;
 }
 
+.rotate-45{
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.cursor-pointer{
+  cursor: pointer;
 }
 
 .grid-cols-4{
@@ -712,6 +717,19 @@ video {
   gap: 2rem;
 }
 
+.border{
+  border-width: 1px;
+}
+
+.border-t-0{
+  border-top-width: 0px;
+}
+
+.border-black{
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
 .bg-amber-400{
   --tw-bg-opacity: 1;
   background-color: rgb(251 191 36 / var(--tw-bg-opacity));
@@ -720,11 +738,6 @@ video {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.object-contain{
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 
 .p-4{
@@ -749,6 +762,11 @@ video {
 .py-4{
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-6{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .py-8{
@@ -778,11 +796,6 @@ video {
   line-height: 1;
 }
 
-.text-6xl{
-  font-size: 3.75rem;
-  line-height: 1;
-}
-
 .text-7xl{
   font-size: 4.5rem;
   line-height: 1;
@@ -805,18 +818,6 @@ video {
   font-weight: 300;
 }
 
-.leading-loose{
-  line-height: 2;
-}
-
-.leading-6{
-  line-height: 1.5rem;
-}
-
-.leading-7{
-  line-height: 1.75rem;
-}
-
 .leading-8{
   line-height: 2rem;
 }
@@ -836,8 +837,25 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.transition-transform{
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
+}
+
+.faq-content {
+  height: 0;
+  display: none;
+  transition: all 300ms ease-in;
+}
+
+.faq-content.show {
+  height: auto;
+  display: block;
 }
 
 .hover\:text-indigo-500:hover{
