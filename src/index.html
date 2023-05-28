@@ -13,8 +13,9 @@
       referrerpolicy="no-referrer"
     />
   </head>
+
   <body class="text-gray-900">
-    <nav class="bg-amber-400">
+    <nav class="relative bg-amber-400">
       <div class="container flex items-center justify-between py-4 mx-auto">
         <!-- logo -->
         <img
@@ -22,12 +23,31 @@
           src="https://uploads-ssl.webflow.com/60f35132d5febb6f03ec9d7a/637a3904e86a45e79e450a65_COCOCART_WORDMARK_BLACKANDWHITE.svg"
           alt="Logo"
         />
+        <!-- hamburger menu -->
 
-        <ul class="flex items-center gap-8">
-          <li><a class="nav-link" href="#">Home</a></li>
-          <li><a class="nav-link" href="#">Resources</a></li>
-          <li><a class="nav-link" href="#">We are hiring!</a></li>
-          <!-- <li class="relative group">
+        <button class="btn md:hidden burger">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- dropdown menu -->
+        <div
+          class="absolute left-0 z-10 hidden w-full bg-white top-full dropdown"
+        >
+          <ul>
+            <li><a class="block py-4 nav-link" href="#">Home</a></li>
+            <li><a class="block py-4 nav-link" href="#">Resources</a></li>
+            <li>
+              <a class="block py-4 nav-link" href="#">We are hiring!</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hidden md:flex">
+          <ul class="flex items-center gap-8">
+            <li><a class="nav-link" href="#">Home</a></li>
+            <li><a class="nav-link" href="#">Resources</a></li>
+            <li><a class="nav-link" href="#">We are hiring!</a></li>
+            <!-- <li class="relative group">
           <a class="hover:text-indigo-500" href="#">Pages</a>
           
           <div class="absolute invisible w-48 p-4 shadow opacity-0 group-hover:visible group-hover:opacity-100">
@@ -38,10 +58,11 @@
             </ul>
           </div>
         </li> -->
-        </ul>
+          </ul>
 
-        <div class="btn-wrapper">
-          <button class="btn">Log In</button>
+          <div class="btn-wrapper">
+            <button class="btn">Log In</button>
+          </div>
         </div>
       </div>
     </nav>
