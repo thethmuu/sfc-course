@@ -48,8 +48,14 @@ footer::before {
   height: 360px;
   background: url('/src/images/footer-wave.svg') no-repeat;
   position: absolute;
-  top: -100%;
+  top: -80px;
   z-index: -1;
+}
+
+@media (width > 640px) {
+  footer::before {
+    top: -100%;
+  }
 }
 
 @layer components {
